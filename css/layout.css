@@ -53,12 +53,19 @@
     font-style: italic;
 }
 
+.main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    width: 100%;
+}
+
 .container {
-    margin: var(--var-default-sizing);
+    grid-column: 4 / 10;
     text-align: center;
-    border-radius: 16px;
-    padding: var(--var-default-sizing);
+    border-radius: 0 0 8px 8px;
     background-color: #ffffff5f;
+    padding: var(--var-default-sizing);
 }
 
 input {
@@ -66,6 +73,7 @@ input {
     font-size: 1rem;
     text-align: center;
     text-transform: uppercase;
+    width: 30%;
 }
 
 .content {
