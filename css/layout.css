@@ -12,19 +12,38 @@
 }
 
 .body {
-    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
     margin: 0;
     background: linear-gradient(to right, #c8c8c8, #cacaca, #c5c5c5);
 }
 
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 var(--var-default-sizing);
+    color: white;
+    background-color: black;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.title {
+    font-size: 2rem;
+}
+
 .container {
     margin: var(--var-default-sizing);
     text-align: center;
-    border-radius: var(--var-default-sizing);
+    border-radius: 16px;
     padding: var(--var-default-sizing);
     background-color: #ffffff5f;
 }
@@ -53,7 +72,12 @@ input {
 }
 
 .icon {
-    font-size: 3rem;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.toggle {
+    margin: .5rem;
 }
 
 .btn, .deleteBtn {

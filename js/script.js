@@ -5,9 +5,10 @@ const iWantToEl = document.getElementById('input-i-want-to');
 const soThatEl = document.getElementById('input-so-that');
 const btnEl = document.getElementById('add');
 
-
+//? add event listener
 btnEl.addEventListener('click', handleNewRow);
 
+//? here is the magic
 function handleNewRow() {
   let asValue = asEl.value;
   let iWantToValue = iWantToEl.value;
