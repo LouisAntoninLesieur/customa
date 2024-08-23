@@ -25,8 +25,8 @@
     justify-content: center;
     width: 100%;
     padding: 0 var(--var-default-sizing);
-    color: white;
-    background-color: black;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
 }
 
 .nav {
@@ -86,11 +86,7 @@ input {
 
 .icon {
     font-size: 2rem;
-    padding: 1rem;
-}
-
-.toggle {
-    margin: .5rem;
+    padding: .5rem;
 }
 
 .btn, .deleteBtn {
