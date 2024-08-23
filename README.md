@@ -4,6 +4,9 @@
 
 I thought of this project in anticipation of simplifying the editing of the user stories that we'll have to make for our final projects assignments.
 
+## Meet the current version of cUSTOMa :
+https://louisantoninlesieur.github.io/customa/
+
 ## To comrades joining me making cUSTOMa better !
 
 1. **clone the repo:**
