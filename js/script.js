@@ -1,14 +1,17 @@
+
+//? get elements from DOM
 const asEl = document.getElementById('input-as');
 const iWantToEl = document.getElementById('input-i-want-to');
 const soThatEl = document.getElementById('input-so-that');
 const btnEl = document.getElementById('add');
 
-btnEl.addEventListener('click', () => {
+
+btnEl.addEventListener('click', handleNewRow);
+
+function handleNewRow() {
   let asValue = asEl.value;
   let iWantToValue = iWantToEl.value;
   let soThatValue = soThatEl.value;
-
-  //   console.log(asValue, iWantToValue, soThatValue);
 
   if (asValue === '' || iWantToValue === '' || soThatValue === '') {
     alert('Please enter all the fields');
@@ -22,8 +25,10 @@ btnEl.addEventListener('click', () => {
 
     //? create a new table row
     const tbodyEl = document.getElementById('tbody');
-    //? create table rows
+    //? create new table rows
     const trEl = document.createElement('tr');
+
+    //? create table cells
     const tdEl = document.createElement('td');
     const tdEl2 = document.createElement('td');
     const tdEl3 = document.createElement('td');
@@ -35,9 +40,9 @@ btnEl.addEventListener('click', () => {
     tdEl3.classList.add('td');
 
     //? add content to table rows
-    tdEl.textContent = asValue.toUpperCase();
-    tdEl2.textContent = iWantToValue.toUpperCase();
-    tdEl3.textContent = soThatValue.toUpperCase();
+    tdEl.textContent = asValue;
+    tdEl2.textContent = iWantToValue;
+    tdEl3.textContent = soThatValue;
 
     //? make table rows editable
     tdEl.contentEditable = true;
@@ -50,13 +55,7 @@ btnEl.addEventListener('click', () => {
     trEl.appendChild(tdEl3);
     tbodyEl.appendChild(trEl);
 
-    //? add special behaviour
-    if (tdEl.textContent.trim().toUpperCase() === 'USER') {
-      tdEl.classList.add('user');
-    } else if (tdEl.textContent.trim().toUpperCase() === 'ADMIN') {
-      tdEl.classList.add('admin');
-    }
-
+    
     //? create a delete button
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'X';
@@ -67,5 +66,43 @@ btnEl.addEventListener('click', () => {
     deleteBtn.addEventListener('click', () => {
       tbodyEl.removeChild(trEl);
     });
+
+    //? add special behaviours
+
+    let writtenContent = tdEl.textContent.trim().toUpperCase();
+
+    if (writtenContent === 'USER' || writtenContent === 'UTILISATEUR') {
+      tdEl.classList.add('user');
+    } else if (writtenContent === 'ADMIN' || writtenContent === 'ADMINISTRATEUR') {
+      tdEl.classList.add('admin');
+    }
+    
+    tdEl.addEventListener('input', () => {
+      const textContent = tdEl.textContent.trim().toUpperCase();
+      if (textContent === 'USER' || textContent === 'UTILISATEUR') {
+        tdEl.classList.add('user');
+      } else if (textContent === 'ADMIN' || textContent === 'ADMINISTRATEUR') {
+        tdEl.classList.add('admin');
+      } else {
+        tdEl.classList.remove('user', 'admin');
+      }
+    });
+    
+    function checkEmptyFields() {
+      let tdElText = tdEl.textContent.trim().toUpperCase();
+      let tdEl2Text = tdEl2.textContent.trim().toUpperCase();
+      let tdEl3Text = tdEl3.textContent.trim().toUpperCase();
+      if (tdElText === '' || tdEl2Text === '' || tdEl3Text === '') {
+        trEl.classList.add('must-be-filled');
+      } else {
+        trEl.classList.remove('must-be-filled');
+      }
+    }
+    
+    tdEl.addEventListener('input', checkEmptyFields);
+    tdEl2.addEventListener('input', checkEmptyFields);
+    tdEl3.addEventListener('input', checkEmptyFields);
+
   }
-});
+
+}
