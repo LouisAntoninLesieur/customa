@@ -14,7 +14,10 @@
     <header class="header">
         <nav class="nav">
             <h1 class="title">userstOries</h1>
-            <button class="btn toggle swhitchBtn"> <span class="icon">&#x263C;</span></button>
+            <div>
+                <button><span class="lang">ENG</span></button>
+                <button class="btn toggle swhitchBtn"> <span class="icon">&#x263C;</span></button>
+            </div>
         </nav>
     </header>
     <div class="container">
@@ -23,9 +26,9 @@
             <table class="table">
                 <thead class="thead">
                     <tr class="tr">
-                        <th class="th">AS</th>
-                        <th class="th">I WANT TO</th>
-                        <th class="th">IN ORDER TO</th>
+                        <th class="th" id="th-1"></th>
+                        <th class="th" id="th-2"></th>
+                        <th class="th" id="th-3"></th>
                     </tr>
                 </thead>
                 <tbody id="tbody">
@@ -37,7 +40,7 @@
             <input type="text" id="input-as" placeholder="AS">
             <input type="text" id="input-i-want-to" placeholder="I WANT TO">
             <input type="text" id="input-so-that" placeholder="IN ORDER TO">
-            <button class="btn" id="add">Add</button>
+            <button class="btn" id="add"></button>
         </div>
     </div>
     
@@ -47,17 +50,18 @@
           <span class="close">&times;</span>
           <h2>About</h2>
           <p>Note that to write "USER" of "ADMIN" as "AS" will automatically display the component as : <span class="userAbout">USER</span> <span class="adminAbout">ADMIN</span></p>
+          <p>This also works for French words <span class="userAbout">UTILISATEUR</span> and <span class="adminAbout">ADMINISTRATEUR</span></p>
           <p>An incomplete row will not be added.</p>
-          <p>Click on the <span class="btnAbout">Add</span> button to add new rows.</p>
+          <p>Click on the <span class="btnAbout">Add</span> / <span class="btnAbout">Ajouter</span> button to add new rows.</p>
           <p>Cells are editable even after being added.</p>
           <p>Rows are deletable.</p>
           <p>Note that an uncomplete edited row will be displayed all in red.</p>
           <p>This project was created as a utility for user stories making.</p>
         </div>
-      </div>
-
+    </div>
     <script src="../js/script.js"></script>
     <script src="../js/dk-md-script.js"></script>
     <script src="../js/modal.js"></script>
+    <script src="../js/language.js"></script>
 </body>
 </html>

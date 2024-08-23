@@ -69,7 +69,6 @@ function handleNewRow() {
     });
 
     //? add special behaviours
-
     let writtenContent = tdEl.textContent.trim().toUpperCase();
 
     if (writtenContent === 'USER' || writtenContent === 'UTILISATEUR') {
