@@ -34,6 +34,11 @@
     color: white;
 }
 
+.visitor {
+    background-color: rgb(253, 184, 57);
+    color: black;
+}
+
 .must-be-filled {
     background-color: #f44336;
     color: white;

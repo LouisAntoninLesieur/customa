@@ -75,6 +75,8 @@ function handleNewRow() {
       tdEl.classList.add('user');
     } else if (writtenContent === 'ADMIN' || writtenContent === 'ADMINISTRATEUR') {
       tdEl.classList.add('admin');
+    } else if (writtenContent === 'VISITOR' || writtenContent === "VISITEUR") {
+      tdEl.classList.add('visitor')
     }
     
     tdEl.addEventListener('input', () => {
