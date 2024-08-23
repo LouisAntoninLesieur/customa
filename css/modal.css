@@ -1,0 +1,44 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(218, 218, 218, 0.5);
+    backdrop-filter: blur(5px);
+  }
+  
+.modal-content {
+    background-color: #000000;
+    color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px;
+    line-height: 2rem;
+}
+
+.userAbout, .adminAbout, .btnAbout {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btnAbout {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
