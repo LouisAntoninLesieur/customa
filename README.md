@@ -31,11 +31,11 @@ I thought of this project in anticipation of simplifying the editing of the user
 
 5. **Create a pull request:**
    ```
-    1. Go to the repository on GitHub.
-    2. Click on the "Pull requests" tab.
-    3. Click on "New pull request".
-    4. Select your branch to compare with `main`.
-    5. Review the changes.
-    6. Add a clear title and description for the pull request.
-    7. Click "Create pull request" to submit.
+   1. Go to the repository on GitHub.
+   2. Click on the "Pull requests" tab.
+   3. Click on "New pull request".
+   4. Select your branch to compare with `main`.
+   5. Review the changes.
+   6. Add a clear title and description for the pull request.
+   7. Click "Create pull request" to submit.
    ```
