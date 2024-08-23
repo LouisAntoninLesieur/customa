@@ -34,7 +34,7 @@
     color: white;
 }
 
-.visitor {
+.visitor, .visitorAbout {
     background-color: rgb(253, 184, 57);
     color: black;
 }

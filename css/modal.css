@@ -20,7 +20,7 @@
     line-height: 2rem;
 }
 
-.userAbout, .adminAbout, .btnAbout {
+.userAbout, .adminAbout, .visitorAbout, .btnAbout {
     padding: 5px;
     border-radius: 5px;
 }
