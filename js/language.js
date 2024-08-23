@@ -13,7 +13,7 @@ thEl3.textContent = 'IN ORDER TO';
 input1.placeholder = 'AS';
 input2.placeholder = 'I WANT TO';
 input3.placeholder = 'IN ORDER TO';
-addBtn.textContent = 'ADD';
+addBtn.textContent = '+';
 
 langEl.addEventListener('click', handleChangeLanguage);
 
@@ -24,7 +24,6 @@ function handleChangeLanguage() {
   input1.placeholder = 'AS';
   input2.placeholder = 'I WANT TO';
   input3.placeholder = 'IN ORDER TO';
-  addBtn.textContent = 'ADD';
 
   if (langEl.textContent === 'ENG') {
     langEl.textContent = 'FRA';
@@ -34,7 +33,6 @@ function handleChangeLanguage() {
     input1.placeholder = 'EN TANT QUE';
     input2.placeholder = 'JE VEUX';
     input3.placeholder = 'AFIN DE';
-    addBtn.textContent = 'AJOUTER';
   } else {
     langEl.textContent = 'ENG';
   }
