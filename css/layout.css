@@ -12,9 +12,6 @@
 }
 
 .body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     height: 100vh;
     margin: 0;
     background: linear-gradient(to right, #c8c8c8, #cacaca, #c5c5c5);
@@ -27,6 +24,8 @@
     padding: 0 var(--var-default-sizing);
     color: rgb(255, 255, 255);
     background: linear-gradient(to right, #010311, #080811, #000113);
+    position: fixed;
+    top: 0;
 }
 
 .nav {
@@ -58,6 +57,7 @@
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
     width: 100%;
+    margin-top: 5rem;
 }
 
 .container {
@@ -83,13 +83,13 @@ input {
 
 .table {
     width: 100%;
-    margin: 0 auto;
 }
 
 .th, .td {
     border-radius: 4px;
     padding: .5rem;
     text-align: left;
+    word-wrap: break-word;
 }
 
 .icon {
@@ -99,6 +99,15 @@ input {
 
 .btn, .deleteBtn {
     padding: .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btnAbout {
     font-size: 1rem;
     cursor: pointer;
     border: none;
