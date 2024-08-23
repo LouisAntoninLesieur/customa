@@ -3,6 +3,11 @@
     color: #fff;
 }
 
+.header-dm {
+    border-bottom: 1px solid white;
+}
+
+
 .container-dm {
     background-color: #7676765f;
     color: #fff;
