@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
 }
 
 :root {
@@ -34,10 +33,12 @@ input {
     padding: .5rem;
     font-size: 1rem;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .content {
     margin: var(--var-default-sizing) 0;
+    text-transform: uppercase;
 }
 
 .table {
