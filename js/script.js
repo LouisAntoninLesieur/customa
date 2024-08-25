@@ -24,7 +24,7 @@ function handleNewRow() {
     iWantToEl.value = '';
     soThatEl.value = '';
 
-    //? create a new table row
+    //? get table body
     const tbodyEl = document.getElementById('tbody');
     //? create new table rows
     const trEl = document.createElement('tr');
