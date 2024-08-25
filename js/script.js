@@ -1,5 +1,5 @@
 /* KEYWORDS BEHAVIOUR */
-//? the logic for keywords layout's behaviour
+//* the logic for keywords layout's behaviour
 //? initialize an index for keywords
 let keywordIndex = 0;
 
@@ -8,9 +8,10 @@ const colorInputEls = document.querySelectorAll('.color-input');
 const colorPickerInputEls = document.querySelectorAll('.color-picker-input');
 const addKeywordBtnEl = document.querySelector('.keywordBtn');
 
+//? initialize an array for recordingkeywords
 let newKeywords = [];
 
-//? add new keyword input
+//? add a new keyword input
 addKeywordBtnEl.addEventListener('click', generateNewKeywordInput);
 
 //? generate new keyword
@@ -33,6 +34,7 @@ function generateNewKeywordInput() {
     colorInput.style.backgroundColor = colorPicker.value;
   });
   
+  //? add the generated keyword to newKeywords array
   addButton.addEventListener('click', () => {
     const newKeywordValue = colorInput.value;
     const newKeywordColor = colorPicker.value;
@@ -40,19 +42,25 @@ function generateNewKeywordInput() {
     console.log(newKeywords);
     addButton.remove();
     
+    //? create delete button
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Supprimer';
     deleteButton.classList.add('delete-button');
     
+    //? add delete button
     newKeyword.appendChild(deleteButton);
     
-    deleteButton.addEventListener('click', () => {
+    //? handle delete button click
+    deleteButton.addEventListener('click', deleteKeyword);
+
+    //? delete keyword from newKeywords array
+    function deleteKeyword() {
       const index = newKeywords.findIndex((keyword) => keyword.text === newKeywordValue);
       if (index !== -1) {
         newKeywords.splice(index, 1);
       }
       newKeyword.remove();
-    });
+    }
   });
   
   keywordIndex++;
@@ -136,7 +144,8 @@ function handleNewRow() {
       tbodyEl.removeChild(trEl);
     });
 
-    //? add special behaviours
+    //* add special behaviours
+    //? display associtated color to keyword if exists at creating row
     let writtenContent = tdEl.textContent.trim().toUpperCase();
 
     if (writtenContent === 'USER' || writtenContent === 'UTILISATEUR') {
@@ -155,6 +164,7 @@ function handleNewRow() {
       }
     }
     
+    //? manage color display once the row exists, remove color if keyword doesn't exist OR change color if keyword exists
     tdEl.addEventListener('input', () => {
       const writtenContent = tdEl.textContent.trim().toUpperCase();
     
@@ -175,6 +185,7 @@ function handleNewRow() {
       }
     });
     
+    //? check if the row is empty ? fill in red : remove red
     function checkEmptyFields() {
       let tdElText = tdEl.textContent.trim().toUpperCase();
       let tdEl2Text = tdEl2.textContent.trim().toUpperCase();
