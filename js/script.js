@@ -85,8 +85,10 @@ function handleNewRow() {
         tdEl.classList.add('user');
       } else if (textContent === 'ADMIN' || textContent === 'ADMINISTRATEUR') {
         tdEl.classList.add('admin');
+      } else if (textContent === 'VISITOR' || textContent === "VISITEUR") {
+        tdEl.classList.add('visitor')
       } else {
-        tdEl.classList.remove('user', 'admin');
+        tdEl.classList.remove('user', 'admin', 'visitor');
       }
     });
     
