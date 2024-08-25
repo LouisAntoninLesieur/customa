@@ -21,7 +21,7 @@ function generateNewKeywordInput() {
   newKeyword.innerHTML = `
       <input class="color-input" type="text" id="input-${keywordIndex}">
       <input class="color-picker-input" type="color" name="color-picker" id="color-picker-${keywordIndex}">
-      <button class="add-button">+</button>`;
+      <button class="add-button">Add me to keywords</button>`;
   
   const asideContent = document.querySelector('.aside-content');
   asideContent.insertBefore(newKeyword, addKeywordBtnEl);
@@ -44,7 +44,7 @@ function generateNewKeywordInput() {
     
     //? create delete button
     const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Supprimer';
+    deleteButton.textContent = 'Delete';
     deleteButton.classList.add('delete-button');
     
     //? add delete button
@@ -75,6 +75,7 @@ colorPickerInputEls.forEach((colorPicker, index) => {
 
 
 /* TABLE BEHAVIOUR */
+//* the logic for table making / editing behaviour
 //? get elements from DOM
 const asEl = document.getElementById('input-as');
 const iWantToEl = document.getElementById('input-i-want-to');
