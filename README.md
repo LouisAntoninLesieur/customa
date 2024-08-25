@@ -5,7 +5,7 @@
 I thought of this project in anticipation of simplifying the editing of the user stories that we'll have to make for our final projects assignments.
 
 ## Meet the current version of cUSTOMa :
-[⚠`desktop only` version (soon to be responsive)](https://louisantoninlesieur.github.io/customa/)
+<a href="https://louisantoninlesieur.github.io/customa/" target="_blank">**⚠desktop only version** (soon to be responsive)</a>
 
 ## To comrades joining me making cUSTOMa better !
 
