@@ -53,19 +53,27 @@
 }
 
 .main {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    align-items: center;
-    width: 100%;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 1rem;
     margin-top: 5rem;
+	width: 100%;
+	height: 100%;
 }
 
-.container {
-    grid-column: 4 / 10;
+.container, .aside {
+    grid-area: 1 / 4 / 2 / 10;
     text-align: center;
     border-radius: 0 0 8px 8px;
     background-color: #ffffff5f;
-    padding: var(--var-default-sizing);
+    padding: var(--var-default-sizing) 0;
+}
+
+.aside {
+    grid-area: 1 / 1 / 2 / 4;
+    height: 50%;
+    border-radius: 0 0 8px 0;
 }
 
 input {
