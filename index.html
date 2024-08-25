@@ -26,7 +26,7 @@
     </header>
     <main class="main">
         <div class="container">
-            <h1>your userstOry</h1>
+            <h1 class="container-title">your userstOry</h1>
             <div class="content">
                 <table class="table">
                     <thead class="thead">
@@ -49,7 +49,22 @@
             </div>
         </div>
         <div class="aside">
-            <h3>KEYWORDS</h3>
+            <h3 class="aside-title">keywords</h3>
+            <div class="aside-content">
+                <div class="input-container">
+                    <input class="color-input-as" type="text" id="input" value="USER">
+                    <input class="color-picker-input" type="color" name="color-picker" id="color-picker" value="#00a3c4">
+                </div>
+                <div class="input-container">
+                    <input class="color-input-admin" type="text" id="input" value="ADMIN">
+                    <input class="color-picker-input" type="color" name="color-picker" id="color-picker" value="#f200ff">
+                </div>
+                <div class="input-container">
+                    <input class="color-input-visitor" type="text" id="input" value="VISITOR">
+                    <input class="color-picker-input" type="color" name="color-picker" id="color-picker " value="#fdb839">
+                </div>
+                <button class="keywordBtn" id="save">add a new keyword</button>
+            </div>
         </div>
     </main>
     
@@ -68,6 +83,7 @@
         </div>
     </div>
 
+    <script src="js/keywords.js"></script>
     <script src="js/script.js"></script>
     <script src="js/dk-md-script.js"></script>
     <script src="js/modal.js"></script>
