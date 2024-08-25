@@ -1,4 +1,72 @@
+/* KEYWORDS BEHAVIOUR */
+//? the logic for keywords layout's behaviour
+//? initialize an index for keywords
+let keywordIndex = 0;
 
+//? get elements from DOM
+const colorInputEls = document.querySelectorAll('.color-input');
+const colorPickerInputEls = document.querySelectorAll('.color-picker-input');
+const addKeywordBtnEl = document.querySelector('.keywordBtn');
+
+let newKeywords = [];
+
+//? add new keyword input
+addKeywordBtnEl.addEventListener('click', generateNewKeywordInput);
+
+//? generate new keyword
+function generateNewKeywordInput() {
+  const newKeyword = document.createElement('div');
+  newKeyword.classList.add('input-container');
+  newKeyword.innerHTML = `
+      <input class="color-input" type="text" id="input-${keywordIndex}">
+      <input class="color-picker-input" type="color" name="color-picker" id="color-picker-${keywordIndex}">
+      <button class="add-button">+</button>`;
+  
+  const asideContent = document.querySelector('.aside-content');
+  asideContent.insertBefore(newKeyword, addKeywordBtnEl);
+  
+  const colorPicker = newKeyword.querySelector('.color-picker-input');
+  const colorInput = newKeyword.querySelector('.color-input');
+  const addButton = newKeyword.querySelector('.add-button');
+  
+  colorPicker.addEventListener('input', () => {
+    colorInput.style.backgroundColor = colorPicker.value;
+  });
+  
+  addButton.addEventListener('click', () => {
+    const newKeywordValue = colorInput.value;
+    const newKeywordColor = colorPicker.value;
+    newKeywords.push({ text: newKeywordValue, color: newKeywordColor });
+    console.log(newKeywords);
+    addButton.remove();
+    
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Supprimer';
+    deleteButton.classList.add('delete-button');
+    
+    newKeyword.appendChild(deleteButton);
+    
+    deleteButton.addEventListener('click', () => {
+      const index = newKeywords.findIndex((keyword) => keyword.text === newKeywordValue);
+      if (index !== -1) {
+        newKeywords.splice(index, 1);
+      }
+      newKeyword.remove();
+    });
+  });
+  
+  keywordIndex++;
+};
+
+//? apply color to input in keywords layout
+colorPickerInputEls.forEach((colorPicker, index) => {
+  colorPicker.addEventListener('input', () => {
+    colorInputEls[index].style.backgroundColor = colorPicker.value;
+  });
+});
+
+
+/* TABLE BEHAVIOUR */
 //? get elements from DOM
 const asEl = document.getElementById('input-as');
 const iWantToEl = document.getElementById('input-i-want-to');
@@ -77,18 +145,33 @@ function handleNewRow() {
       tdEl.classList.add('admin');
     } else if (writtenContent === 'VISITOR' || writtenContent === "VISITEUR") {
       tdEl.classList.add('visitor')
+    } else {
+      const keyword = newKeywords.find(keyword => keyword.text.toUpperCase() === writtenContent);
+      if (keyword) {
+        tdEl.style.backgroundColor = keyword.color;
+      } else {
+        tdEl.classList.remove('user', 'admin', 'visitor');
+        tdEl.style.backgroundColor = '';
+      }
     }
     
     tdEl.addEventListener('input', () => {
-      const textContent = tdEl.textContent.trim().toUpperCase();
-      if (textContent === 'USER' || textContent === 'UTILISATEUR') {
+      const writtenContent = tdEl.textContent.trim().toUpperCase();
+    
+      if (writtenContent === 'USER' || writtenContent === 'UTILISATEUR') {
         tdEl.classList.add('user');
-      } else if (textContent === 'ADMIN' || textContent === 'ADMINISTRATEUR') {
+      } else if (writtenContent === 'ADMIN' || writtenContent === 'ADMINISTRATEUR') {
         tdEl.classList.add('admin');
-      } else if (textContent === 'VISITOR' || textContent === "VISITEUR") {
+      } else if (writtenContent === 'VISITOR' || writtenContent === "VISITEUR") {
         tdEl.classList.add('visitor')
       } else {
-        tdEl.classList.remove('user', 'admin', 'visitor');
+        const keyword = newKeywords.find(keyword => keyword.text.toUpperCase() === writtenContent);
+        if (keyword) {
+          tdEl.style.backgroundColor = keyword.color;
+        } else {
+          tdEl.classList.remove('user', 'admin', 'visitor');
+          tdEl.style.backgroundColor = '';
+        }
       }
     });
     
