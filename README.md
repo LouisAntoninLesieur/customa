@@ -42,3 +42,16 @@ I thought of this project in anticipation of simplifying the editing of the user
    6. Add a clear title and description for the pull request.
    7. Click "Create pull request" to submit.
    ```
+
+## A quick guide to .cUSTOMa.
+
+**.cUSTOMa.** provides you with **three automatic registrations** for the **“USER” | “ADMIN” | “VISITOR” inputs**, with specially chosen **colors** to be **easily distinguishable**. 
+
+However, **you can handle any other words with any other color you may want to** !
+
+![Capture d’écran 2024-08-26 à 18 45 10](https://github.com/user-attachments/assets/ede7f3d8-c765-435e-b6e9-a856b08aac9b)
+
+More, **.cUSTOMa.** embeds the possibility to **switch to a dark-mode**.
+
+![Capture d’écran 2024-08-26 à 18 45 24](https://github.com/user-attachments/assets/12120505-0859-41ff-bfb7-51328d876422)
+
