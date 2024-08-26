@@ -1,93 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>.cUSTOMa.</title>
-    <link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/styles-dm.css">
-    <link rel="stylesheet" href="./css/modal.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>.cUSTOMa.</title>
+	<link rel="stylesheet" href="./css/layout.css">
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/styles-dm.css">
+	<link rel="stylesheet" href="./css/modal.css">
 </head>
+
 <body class="body">
-  
-    <header class="header">
-        <nav class="nav">
-            <div class="logo">
-                <h1 class="title">.cUSTOMa.</h1>
-                <p class="subtitle"><span class="c">c</span>ustom<span class="u">U</span>ser<span class="sto">STO</span>ry<span class="ma">Ma</span>nager</p>
-            </div>
-            <div>
-                <button><span class="lang">ENG</span></button>
-                <button class="toggle swhitchBtn"> <span class="icon">&#x263C;</span></button>
-                <button class="btnAbout" id="about">About</button>
-            </div>
-        </nav>
-    </header>
-    <main class="main">
-        <div class="container">
-            <h1 class="container-title">your userstOry</h1>
-            <div class="content">
-                <table class="table">
-                    <thead class="thead">
-                        <tr class="tr">
-                            <th class="th" id="th-1"></th>
-                            <th class="th" id="th-2"></th>
-                            <th class="th" id="th-3"></th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody">
-                        <!-- lines -->
-                    </tbody>
-                </table>
-            </div>
-            <div class="inputs-container">
-                <input type="text" id="input-as" placeholder="AS">
-                <input type="text" id="input-i-want-to" placeholder="I WANT TO">
-                <input type="text" id="input-so-that" placeholder="IN ORDER TO">
-                <button class="btn" id="add"></button>
-            </div>
-        </div>
-        <div class="aside">
-            <h3 class="aside-title">keywords</h3>
-            <div class="aside-content">
-                <div class="input-container">
-                    <input class="color-input-as" type="text" id="userInput" value="USER" disabled>
-                    <input class="color-picker-input" type="color" name="color-picker" value="#00a3c4" disabled>
-                </div>
-                <div class="input-container">
-                    <input class="color-input-admin" type="text" id="adminInput" value="ADMIN" disabled>
-                    <input class="color-picker-input" type="color" name="color-picker" value="#f200ff" disabled>
-                </div>
-                <div class="input-container">
-                    <input class="color-input-visitor" type="text" id="visitorInput" value="VISITOR" disabled>
-                    <input class="color-picker-input" type="color" name="color-picker" value="#fdb839" disabled>
-                </div>
-                <button class="keywordBtn" id="save">add a new keyword</button>
-            </div>
-        </div>
-    </main>
-    
-    <div id="about-modal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <h2>About</h2>
-          <p>Note that to write "USER" of "ADMIN" or "VISITOR" in "AS" will automatically display the component as : <span class="userAbout">USER</span> <span class="adminAbout">ADMIN</span> <span class="visitorAbout">VISITOR</span>.</p>
-          <p>This also works for French words <span class="userAbout">UTILISATEUR</span>, <span class="adminAbout">ADMINISTRATEUR</span> and <span class="visitorAbout">VISITEUR</span>.</p>
-          <p>An incomplete row will not be added.</p>
-          <p>Click the <span class="btnAbout">+</span> button to add new rows.</p>
-          <p>Cells are editable even after being added.</p>
-          <p>Rows are deletable.</p>
-          <p>Note that an uncomplete edited row will be displayed all in red.</p>
-          <p>This project was created as a utility for user stories making.</p>
-        </div>
-    </div>
+
+	<header class="header">
+		<nav class="nav">
+			<div class="logo">
+				<h1 class="title">.cUSTOMa.</h1>
+				<p class="subtitle"><span class="c">c</span>ustom<span class="u">U</span>ser<span class="sto">STO</span>ry<span
+						class="ma">Ma</span>nager</p>
+			</div>
+			<div>
+				<button><span class="lang">ENG</span></button>
+				<button class="toggle swhitchBtn"> <span class="icon">&#x263C;</span></button>
+				<button class="btnAbout" id="about">About</button>
+			</div>
+		</nav>
+	</header>
+	<main class="main">
+		<div class="container">
+			<h1 class="container-title">your userstOry</h1>
+			<div class="content">
+				<table class="table">
+					<thead class="thead">
+						<tr class="tr">
+							<th class="th" id="th-1"></th>
+							<th class="th" id="th-2"></th>
+							<th class="th" id="th-3"></th>
+						</tr>
+					</thead>
+					<tbody id="tbody">
+						<!-- lines -->
+					</tbody>
+				</table>
+			</div>
+			<div class="inputs-container">
+				<input type="text" id="input-as" placeholder="AS">
+				<input type="text" id="input-i-want-to" placeholder="I WANT TO">
+				<input type="text" id="input-so-that" placeholder="IN ORDER TO">
+				<button class="btn" id="add"></button>
+			</div>
+		</div>
+		<div class="aside">
+			<h3 class="aside-title">keywords</h3>
+			<div class="aside-content">
+				<div class="input-container">
+					<input class="color-input-as" type="text" id="userInput" value="USER" disabled>
+					<input class="color-picker-input" type="color" name="color-picker" value="#00a3c4" disabled>
+				</div>
+				<div class="input-container">
+					<input class="color-input-admin" type="text" id="adminInput" value="ADMIN" disabled>
+					<input class="color-picker-input" type="color" name="color-picker" value="#f200ff" disabled>
+				</div>
+				<div class="input-container">
+					<input class="color-input-visitor" type="text" id="visitorInput" value="VISITOR" disabled>
+					<input class="color-picker-input" type="color" name="color-picker" value="#fdb839" disabled>
+				</div>
+				<button class="keywordBtn" id="save">add a new keyword</button>
+			</div>
+		</div>
+	</main>
+
+	<div id="about-modal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>About</h2>
+			<p>Note that to write "USER" of "ADMIN" or "VISITOR" in "AS" will automatically display the component as : <span
+					class="userAbout">USER</span> <span class="adminAbout">ADMIN</span> <span class="visitorAbout">VISITOR</span>.
+			</p>
+			<p>This also works for French words <span class="userAbout">UTILISATEUR</span>, <span
+					class="adminAbout">ADMINISTRATEUR</span> and <span class="visitorAbout">VISITEUR</span>.</p>
+			<p>An incomplete row will not be added.</p>
+			<p>Click the <span class="btnAbout">+</span> button to add new rows.</p>
+			<p>Cells are editable even after being added.</p>
+			<p>Rows are deletable.</p>
+			<p>Note that an uncomplete edited row will be displayed all in red.</p>
+			<p>This project was created as a utility for user stories making.</p>
+		</div>
+	</div>
 
 
-    <script src="js/script.js"></script>
-    <script src="js/dk-md-script.js"></script>
-    <script src="js/modal.js"></script>
-    <script src="js/language.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/dk-md-script.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/language.js"></script>
 
 </body>
+
 </html>
