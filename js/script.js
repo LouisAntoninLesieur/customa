@@ -12,20 +12,20 @@ const addKeywordBtnEl = document.querySelector('.keywordBtn');
 let newKeywords = [];
 
 function getContrastingTextColor(backgroundColor) {
-  // Supprimez le caractère '#' s'il est présent
+  //? remove the '#' symbol if it exists
   if (backgroundColor.startsWith('#')) {
     backgroundColor = backgroundColor.slice(1);
   }
 
-  // Convertit le code hexadécimal en composants RGB
+  //? convert the hex color to RGB
   const r = parseInt(backgroundColor.substring(0, 2), 16);
   const g = parseInt(backgroundColor.substring(2, 4), 16);
   const b = parseInt(backgroundColor.substring(4, 6), 16);
 
-  // Calcule la luminosité perçue
+  //? calculate the luminance
   const luminance = 0.299 * r + 0.587 * g + 0.114 * b;
 
-  // Retourne 'noir' ou 'blanc' en fonction de la luminosité
+  //? return the text color based on the luminance
   return luminance > 128 ? 'black' : 'white';
 }
 
