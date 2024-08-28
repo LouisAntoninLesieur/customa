@@ -11,6 +11,24 @@ const addKeywordBtnEl = document.querySelector('.keywordBtn');
 //? initialize an array for recordingkeywords
 let newKeywords = [];
 
+function getContrastingTextColor(backgroundColor) {
+  //? remove the '#' symbol if it exists
+  if (backgroundColor.startsWith('#')) {
+    backgroundColor = backgroundColor.slice(1);
+  }
+
+  //? convert the hex color to RGB
+  const r = parseInt(backgroundColor.substring(0, 2), 16);
+  const g = parseInt(backgroundColor.substring(2, 4), 16);
+  const b = parseInt(backgroundColor.substring(4, 6), 16);
+
+  //? calculate the luminance
+  const luminance = 0.299 * r + 0.587 * g + 0.114 * b;
+
+  //? return the text color based on the luminance
+  return luminance > 128 ? 'black' : 'white';
+}
+
 //? add a new keyword input
 addKeywordBtnEl.addEventListener('click', generateNewKeywordInput);
 
@@ -30,6 +48,14 @@ function generateNewKeywordInput() {
   const colorInput = newKeyword.querySelector('.color-input');
   const addButton = newKeyword.querySelector('.add-button');
   
+  //? adapt font-color to input in keywords layout before being added
+  colorPicker.addEventListener('change', function() {
+    const selectedColor = this.value;
+    const contrastingColor = getContrastingTextColor(selectedColor);
+    colorInput.style.color = contrastingColor;
+  });
+
+  //? apply color to input in keywords layout
   colorPicker.addEventListener('input', () => {
     colorInput.style.backgroundColor = colorPicker.value;
   });
@@ -38,8 +64,8 @@ function generateNewKeywordInput() {
   addButton.addEventListener('click', () => {
     const newKeywordValue = colorInput.value;
     const newKeywordColor = colorPicker.value;
-    newKeywords.push({ text: newKeywordValue, color: newKeywordColor });
-    console.log(newKeywords);
+    newKeywords.push({ text: newKeywordValue, color: newKeywordColor, font: getContrastingTextColor(newKeywordColor) });
+    // console.log(newKeywords);
     addButton.remove();
     
     //? create delete button
@@ -159,6 +185,7 @@ function handleNewRow() {
       const keyword = newKeywords.find(keyword => keyword.text.toUpperCase() === writtenContent);
       if (keyword) {
         tdEl.style.backgroundColor = keyword.color;
+        tdEl.style.color = keyword.font;
       } else {
         tdEl.classList.remove('user', 'admin', 'visitor');
         tdEl.style.backgroundColor = '';
