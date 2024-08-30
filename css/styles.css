@@ -1,0 +1,61 @@
+::placeholder {
+    color: #d3d3d3;
+}
+
+.tbody {
+    background-color: #ffffff;
+}
+
+.thead {
+    background-color: #7c7c7c;
+    color: #ffffff;
+}
+
+.btn:hover{
+    background-color: #71e775;
+    transition: .2s;
+}
+
+.btn:active {
+    background-color: #3e8e41;
+}
+
+.deleteBtn {
+    background-color: #f44336;
+}
+
+.user, .userAbout, .color-input-as {
+    background-color: rgb(0, 163, 196);
+    color: white;
+}
+
+.admin , .adminAbout, .color-input-admin {
+    background-color: rgb(242, 0, 255);
+    color: white;
+}
+
+.visitor, .visitorAbout, .color-input-visitor {
+    background-color: rgb(253, 184, 57);
+    color: black;
+}
+
+.must-be-filled {
+    background-color: #f44336;
+    color: white;
+}
+
+.c {
+    background-color: #71e775;
+}
+
+.u {
+    background-color: rgb(0, 163, 196);
+}
+
+.sto {
+    background-color: rgb(242, 0, 255);
+}
+
+.ma {
+    background-color: #f44336;
+}

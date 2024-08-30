@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --var-default-sizing: 3rem;
+}
+
+.body {
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #c8c8c8, #cacaca, #c5c5c5);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 var(--var-default-sizing);
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to right, #010311, #080811, #000113);
+    position: fixed;
+    top: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.title {
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.main {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 1rem;
+    margin-top: 5rem;
+	width: 100%;
+	height: 100%;
+}
+
+.container-title, .aside-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.container, .aside {
+    grid-area: 1 / 4 / 2 / 10;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    background-color: #ffffff5f;
+    padding: var(--var-default-sizing) 0;
+}
+
+.aside {
+    grid-area: 1 / 1 / 2 / 4;
+    border-radius: 0 0 8px 0;
+}
+
+.aside-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+input {
+    padding: .5rem;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    width: 30%;
+}
+
+.content {
+    margin: var(--var-default-sizing) 0;
+    text-transform: uppercase;
+}
+
+.table {
+    width: 100%;
+}
+
+.th, .td {
+    border-radius: 4px;
+    padding: .5rem;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.color-input, .color-input-as, .color-input-admin, .color-input-visitor {
+    width: 50%;
+}
+
+.color-picker-input {
+    width: 3rem;
+    height: 2.5rem;
+    margin: 1rem 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 2rem;
+    padding: .5rem;
+}
+
+.btn, .deleteBtn {
+    padding: .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btnAbout, .keywordBtn {
+    padding: .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+}

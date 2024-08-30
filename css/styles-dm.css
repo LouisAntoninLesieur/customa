@@ -1,0 +1,38 @@
+.dark-mode {
+    background: linear-gradient(to right, #010311, #080811, #000113);
+    color: #fff;
+}
+
+.header-dm {
+    border-bottom: 1px solid white;
+}
+
+
+.container-dm {
+    background-color: #7676765f;
+    color: #fff;
+}
+
+.tbody-dm {
+    background-color: #232323;
+    color: #fff;
+}
+
+.swhitchBtn-dm {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+.swhitchBtn-dm:hover {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+.swhitchBtn-dm:active {
+    background-color: #03010b;
+}
+
+.modal-content-dm {
+    color: inherit;
+}
